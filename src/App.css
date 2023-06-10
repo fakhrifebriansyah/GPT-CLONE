@@ -1,38 +1,88 @@
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.chat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 80%;
+    overflow-y: scroll;
+    padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.user-message {
+    background-color: #f2f2f2;
+    color: black;
+    align-self: flex-end;
+    margin: 5px 0;
+    padding: 10px;
+    max-width: 50%;
+    word-wrap: break-word;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.bot-message {
+    background-color: rgb(114, 108, 108);
+    color: white;
+    align-self: flex-start;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 50%;
+    word-wrap: break-word;
+    width: 85%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid green;
+    outline:  none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
+
+button {
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
